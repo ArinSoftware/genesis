@@ -148,9 +148,6 @@ ul {
     color: var(--light-color);
 }
 
-
-
-
 /** HERO SECTION **/
 
 #hero {
@@ -344,4 +341,99 @@ ul {
 #arrow-left, #arrow-right {
     cursor: pointer;
     margin-left: 2rem;
+}
+
+/** PORTFOLIO SECTION **/
+
+section#portfolio {
+    padding-top: 8rem;
+}
+
+.portfolio-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 'item-1 item-2 item-3 item-3'
+                         'item-1 item-4 item-5 item-6'
+                         'item-7 item-7 item-8 item-6'   ;                     
+}
+
+.portfolio-item {
+   width: 100%; 
+   height: 25rem;
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.portfolio-item::before {
+    content: '';
+    position: absolute;
+    background-color: rgba(71, 146, 165, .9);
+    width: 0;
+    height: 0;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: var(--general-transition);
+}
+
+.portfolio-item:hover::before {
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+}
+
+.portfolio-item span {
+    font-size: 5rem;
+    color: var(--light-color);
+    position: relative;
+    z-index: 90;
+    opacity: 0;
+    transition: var(--general-transition);
+}
+
+.portfolio-item:hover span {
+    opacity: 1;
+}
+
+
+
+.portfolio-item-1 {
+    grid-area: item-1;
+    min-height: 50rem;
+    background-image: url('../img/portfolio-item-1.jpg');
+}
+.portfolio-item-2 {
+    grid-area: item-2;
+    background-image: url('../img/portfolio-item-2.jpg');
+}
+.portfolio-item-3 {
+    grid-area: item-3;
+    background-image: url('../img/portfolio-item-3.jpg');
+}
+.portfolio-item-4 {
+    grid-area: item-4;
+    background-image: url('../img/portfolio-item-4.jpg');
+}
+.portfolio-item-5 {
+    grid-area: item-5;
+    background-image: url('../img/portfolio-item-5.jpg');
+}
+.portfolio-item-6 {
+    grid-area: item-6;
+    min-height: 50rem;
+    background-image: url('../img/portfolio-item-6.jpg');
+}
+.portfolio-item-7 {
+    grid-area: item-7;
+    background-image: url('../img/portfolio-item-7.jpg');
+}
+.portfolio-item-8 {
+    grid-area: item-8;
+    background-image: url('../img/portfolio-item-8.jpg');
 }
