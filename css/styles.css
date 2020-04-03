@@ -460,6 +460,7 @@ section#portfolio {
     width: 0;
     height: 0;
     opacity: 0;
+    overflow: hidden;
     transition: var(--general-transition);
 }
 
@@ -534,4 +535,223 @@ ul.team-social-list li:nth-child(3) a:hover {
     border-color: transparent;
 }
 
+/** BLOG SECTION **/
 
+.latest-posts {
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-detail {
+    margin-right: 4rem;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.blog-post {
+    background-color: var(--light-color);
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 1rem 0 rgba(0,0,0, 0.5);
+    border-radius: .5rem;
+}
+
+.blog-post h4 {
+    text-transform: uppercase;
+    font-size:1.6rem;
+    padding-bottom: 1.4rem;
+    color: var(--primary-color);
+}
+
+.blog-post p {
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+
+.blog-post a {
+    text-transform: uppercase;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    font-weight: 700;
+    display: block;
+    margin: 1rem 0;
+}
+
+.post-meta {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-top: .1rem solid var(--primary-color);
+    padding-top: 1rem;
+}
+
+.post-meta p {
+    margin-left: 1rem;
+    text-transform: uppercase;
+}
+
+.divider {
+    color: var(--dark-color);
+    margin-left: 1rem;
+    font-weight: bold;
+}
+
+.post-meta p.author {
+    color: var(--primary-color);
+    font-family: var(--secondary-font);
+    font-weight: bold;
+    letter-spacing: .1rem;
+}
+
+.post-meta img {
+    height: 4rem;
+    width: auto;
+    border-radius: 50%;
+}
+
+/** CONTACT SECTION **/
+
+section#contact {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(0deg, rgba(0,0,0, 0.7), rgba(0,0,0, 0.7)), url('../img/contact_bg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-content h2 {
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-bottom: 4rem;
+}
+
+.name, .email, .message {
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: .1rem solid var(--primary-color);
+    min-width: 100%;
+    max-width: 100%;
+    padding: 2rem .5rem;
+    color: var(--light-color);
+    margin-bottom: 2rem;
+}
+
+::placeholder {
+    color: var(--primary-color);
+}
+
+/** FOOTER SECTION **/
+
+footer {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    padding: 2rem 0;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+}
+
+.social-media h4 {
+    font-size: 1.4rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    white-space: nowrap;
+}
+
+ul.social-list {
+    display: flex;
+    margin-left: 2rem;
+    font-size: 2rem;
+}
+
+ul.social-list li {
+    padding: 0;
+    text-align: center;
+}
+
+ul.social-list li a {
+    color: var(--light-color);
+    border: 1px solid var(--light-color);
+    display: inline-block;
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    margin: 0 .5rem;
+    transition: var(--general-transition);
+}
+
+ul.social-list li i {
+    line-height: 4rem;
+}
+
+ul.social-list li:nth-child(1) a:hover {
+    background-color: #38A1F3;
+    border-color: transparent;
+}
+
+ul.social-list li:nth-child(2) a:hover {
+    background-color: #171515;
+    border-color: transparent;
+}
+ul.social-list li:nth-child(3) a:hover {
+    background-color: #3B5998;
+    border-color: transparent;
+}
+ul.social-list li:nth-child(4) a:hover {
+    background-color: #FF0000;
+    border-color: transparent;
+}
+
+.copy-right {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+}
+
+.back-top {
+   justify-self: end; 
+   text-align: center;
+}
+
+.back-top i {
+    font-size: 2rem;
+
+}
+
+.back-top a {
+    display: inline-block;
+    height: 4rem;
+    width: 4rem;
+    border: .1rem solid var(--light-color);
+    line-height: 4rem;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    transition: var(--general-transition);
+}
+
+.back-top a:hover {
+    border-color: transparent;
+    background-color: var(--light-color);
+    color: var(--primary-color);
+}
